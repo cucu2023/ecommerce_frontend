@@ -1,0 +1,43 @@
+/* Estilos para el formulario de registro */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #b3c6e0;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f7faff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border: 1.5px solid #0056b3;
+    outline: none;
+    box-shadow: 0 0 0 2px #e3f0ff;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #0056b3 60%, #007bff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 86, 179, 0.08);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #003366 60%, #0056b3 100%);
+}

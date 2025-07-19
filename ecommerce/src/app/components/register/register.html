@@ -1,1 +1,12 @@
-<p>register works!</p>
+<h2>Registro</h2>
+<form (ngSubmit)="onRegister()" #registerForm="ngForm">
+    <input type="text" placeholder="Usuario" [(ngModel)]="username" name="username" required>
+    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+    <input type="text" placeholder="Nombre" [(ngModel)]="first_name" name="first_name" required>
+    <input type="text" placeholder="Apellido" [(ngModel)]="last_name" name="last_name" required>
+    <input type="password" placeholder="Contraseña" [(ngModel)]="password1" name="password1" required>
+    <input type="password" placeholder="Repetir contraseña" [(ngModel)]="password2" name="password2" required>
+    <button type="submit">Registrarse</button>
+</form>
+<div *ngIf="errorMessage" class="register-error">{{ errorMessage }}</div>
+<div *ngIf="successMessage" class="register-success">{{ successMessage }}</div>

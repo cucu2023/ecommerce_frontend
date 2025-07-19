@@ -251,3 +251,141 @@
         gap: 8px;
     }
 }
+
+/* Modal de autenticación mejorado */
+.auth-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 32, 0.45);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 64, 0.18);
+    padding: 36px 28px 22px 28px;
+    min-width: 340px;
+    max-width: 95vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #0056b3;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0056b3;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #003366;
+}
+
+.auth-modal h2 {
+    color: #003366;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.auth-modal form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.auth-modal input[type="text"],
+.auth-modal input[type="email"],
+.auth-modal input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #b3c6e0;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f7faff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.auth-modal input:focus {
+    border: 1.5px solid #0056b3;
+    outline: none;
+    box-shadow: 0 0 0 2px #e3f0ff;
+}
+
+.auth-modal button[type="submit"],
+.auth-modal .btn-comprar {
+    background: linear-gradient(90deg, #0056b3 60%, #007bff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 86, 179, 0.08);
+}
+
+.auth-modal button[type="submit"]:hover,
+.auth-modal .btn-comprar:hover {
+    background: linear-gradient(90deg, #003366 60%, #0056b3 100%);
+}
+
+.auth-switch-text {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.auth-switch-text a {
+    color: #0056b3;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.auth-switch-text a:hover {
+    color: #003366;
+}
+
+.register-error {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 6px;
+    padding: 7px 10px;
+    margin-top: 8px;
+    font-size: 0.98rem;
+    text-align: center;
+}
+
+.register-success {
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 7px 10px;
+    margin-top: 8px;
+    font-size: 0.98rem;
+    text-align: center;
+}

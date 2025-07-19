@@ -31,10 +31,10 @@
 
             <!-- Usuario -->
             <div class="user-menu">
-                <a routerLink="/login" class="user-link">
+                <button class="user-link" (click)="openAuthModal()">
                     <span class="user-icon">👤</span>
                     <span class="user-text">Mi Cuenta</span>
-                </a>
+                </button>
             </div>
 
             <!-- Botón hamburguesa para móvil -->
@@ -46,3 +46,22 @@
         </div>
     </div>
 </nav>
+
+<!-- Modal de Autenticación -->
+<div class="auth-modal-backdrop" *ngIf="isAuthModalOpen" (click)="closeAuthModal()">
+    <div class="auth-modal" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeAuthModal()">&times;</button>
+        <ng-container *ngIf="authView === 'login'">
+            <app-login (switchToRegister)="authView = 'register'"></app-login>
+            <div class="auth-switch-text">
+                ¿No tienes cuenta? <a href="#" (click)="switchToRegister($event)">Regístrate</a>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="authView === 'register'">
+            <app-register (switchToLogin)="authView = 'login'"></app-register>
+            <div class="auth-switch-text">
+                ¿Ya tienes cuenta? <a href="#" (click)="switchToLogin($event)">Inicia sesión</a>
+            </div>
+        </ng-container>
+    </div>
+</div>
