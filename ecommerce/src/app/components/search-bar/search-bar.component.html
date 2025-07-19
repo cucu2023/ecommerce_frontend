@@ -1,0 +1,21 @@
+<div class="search-container">
+    <div class="search-wrapper">
+        <div class="search-input-group">
+            <input type="text" [(ngModel)]="searchTerm" (keypress)="onKeyPress($event)"
+                placeholder="¿Qué estás buscando?" class="search-input">
+            <button type="button" (click)="onSearch()" class="search-button">
+                🔍
+            </button>
+        </div>
+
+        <div class="search-suggestions">
+            <span class="suggestion-label">Sugerencias:</span>
+            <div class="suggestion-tags">
+                <span class="suggestion-tag">Electrónicos</span>
+                <span class="suggestion-tag">Ropa</span>
+                <span class="suggestion-tag">Hogar</span>
+                <span class="suggestion-tag">Deportes</span>
+            </div>
+        </div>
+    </div>
+</div>

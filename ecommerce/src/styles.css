@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body,
+app-root {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    box-sizing: border-box;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+header,
+.navbar,
+.navbar-container,
+.search-section,
+.carousel-section {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box;
+}
+
+/* Opcional: para que el carrusel sea full ancho y sin bordes redondeados */
+.carousel-container,
+.carousel-wrapper {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    box-sizing: border-box;
+}

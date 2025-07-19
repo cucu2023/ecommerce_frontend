@@ -1,0 +1,48 @@
+<nav class="navbar w-100 p-0 m-0" style="min-width:100vw;width:100vw;">
+    <div class="navbar-container w-100 p-0 m-0" style="min-width:100vw;width:100vw;">
+        <!-- Logo -->
+        <div class="navbar-brand">
+            <a routerLink="/" class="logo">
+                <span class="logo-text">MiEcommerce</span>
+            </a>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="navbar-menu" [class.active]="isMenuOpen">
+            <ul class="nav-links">
+                <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                        (click)="closeMenu()">Inicio</a></li>
+                <li><a routerLink="/categorias" routerLinkActive="active" (click)="closeMenu()">Categorías</a></li>
+                <li><a routerLink="/ofertas" routerLinkActive="active" (click)="closeMenu()">Ofertas</a></li>
+                <li><a routerLink="/nuevos" routerLinkActive="active" (click)="closeMenu()">Nuevos</a></li>
+                <li><a routerLink="/ayuda" routerLinkActive="active" (click)="closeMenu()">Ayuda</a></li>
+            </ul>
+        </div>
+
+        <!-- Elementos del lado derecho -->
+        <div class="navbar-actions">
+            <!-- Carrito -->
+            <div class="cart-icon">
+                <a routerLink="/carrito" class="cart-link">
+                    <span class="cart-icon-symbol">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+
+            <!-- Usuario -->
+            <div class="user-menu">
+                <a routerLink="/login" class="user-link">
+                    <span class="user-icon">👤</span>
+                    <span class="user-text">Mi Cuenta</span>
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa para móvil -->
+            <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
